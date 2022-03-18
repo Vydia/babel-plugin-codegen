@@ -42,10 +42,10 @@ function getReplacement(
 
   let module = requireFromString(code, filename)
 
-  // If a function is epxorted, call it with args
+  // If a function is exported, call it with args
   if (typeof module === 'function') {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-    module = module(...args)
+    module = module(...args, babel)
   } else if (args.length) {
     throw new Error(
       `codegen module (${p.relative(

@@ -39,17 +39,17 @@
     "validate": "kcd-scripts validate"
   },
   "dependencies": {
-    "@babel/runtime": "^7.12.5",
+    "@babel/runtime": "^7.17.2",
     "babel-plugin-macros": "^3.0.1",
     "require-from-string": "^2.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
+    "@babel/core": "^7.17.2",
     "@types/babel-plugin-macros": "^2.8.4",
     "@types/jest": "^26.0.15",
     "@types/require-from-string": "^1.2.0",
     "ast-pretty-print": "^2.0.1",
-    "babel-plugin-tester": "^10.0.0",
+    "babel-plugin-tester": "^10.1.0",
     "kcd-scripts": "^7.2.0",
     "strip-ansi": "^6.0.0",
     "type-fest": "^0.20.2",

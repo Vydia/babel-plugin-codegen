@@ -46,6 +46,16 @@ pluginTester({
         .map(fruit => \`export const \${fruit} = "\${fruit}";\`)
         .join('')
     `,
+    'codegen comment export a function': `
+      // @codegen
+      const array = ['apple', 'orange', 'pear']
+      module.exports = ({ addExternalDependency }) => {
+        addExternalDependency('./whatever.js')
+        return array
+          .map(fruit => \`export const \${fruit} = "\${fruit}";\`)
+          .join('')
+      }
+    `,
     'dynamic value that is wrong': {
       code: `const x = codegen\`module.exports = "\${dynamic}"\``,
       error: true,
